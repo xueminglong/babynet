@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝贝网登录</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="styleSheet" href="../css/public.css">
+    <link rel="styleSheet" href="../css/loginstyle.css">
+    <link rel="styleSheet" href="../css/verify.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/verify.js"></script>
+</head>
+
+<body>
+    <div class="login_top">
+        <div class="container">
+            <div class="login_top_box">
+                <a href="../index.html" class="login_top_box_img">
+                    <img src="../imgs/logo1.png" alt="">
+                </a>
+                <a href="#" class="login_top_box_a">
+                    <i></i>
+                    "登录页面"改进建议
+                </a>
+            </div>
+
+        </div>
+        <div class="login_top_title  visible-md visible-lg">
+            <i class="icon-tips"></i>
+            <p>依《网络安全法》相关要求，即日起蘑菇街会员登陆需绑定手机。为保障您的账户安全及正常使用，如您尚未绑定，请尽快完成绑定，感谢您的理解和支持!</p>
+        </div>
+    </div>
+    <!-- 登录内容 -->
+    <div class="login_content">
+        <div class="container">
+            <div class="login_content_box">
+                <!-- 警告 -->
+                <div class="login_content_top">
+                    <i class="icon-tips"></i>
+                    <p>宝贝网不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                </div>
+                <!-- 登录框 -->
+                <div class="login_content_center">
+                    <div class="login_content_center_title">
+                        <h3>账户登录</h3>
+                    </div>
+                    <div class="login_content_center_box">
+                        <div>
+                            <div class="login_content_center_input">
+                                <label class="login_content_center_icon">
+                                    <img src="../imgs/loginIcon4.png">
+                                </label>
+                                <input class="name" type="text" placeholder="请输入用户名">
+                            </div>
+                            <span class="colour_ash"></span>
+                        </div>
+                        <div>
+                            <div class="login_content_center_input">
+                                <label class="login_content_center_icon">
+                                    <img src="../imgs/loginIcon5.png">
+                                </label>
+                                <input class="password" type="password" placeholder="请输入密码">
+                            </div>
+                            <span class="colour_ash"></span>
+                        </div>
+                        <!-- 验证 -->
+                        <div>
+                            <div class="login_content_center_input">
+                                <div id="mpanel1" class="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login_content_center_A">
+                            <a href="#" class="">忘记密码</a>
+                            <a href="./register.html" class="">立即注册</a>
+                        </div>
+
+                        <button class="login_content_center_btn" id="btn">
+                            登录
+                        </button>
+                    </div>
+                </div>
+                <!-- 社交账号登录 -->
+                <div class="login_content_other cf">
+                    <label>社交账号登录</label>
+                    <div class="login_content_other_box">
+                        <a href="#">
+                            <img src="../imgs/loginIcon2.png">
+                            <span>微信登录</span>
+                        </a>
+                        <a href="#">
+                            <img src="../imgs/loginIcon3.png">
+                            <span>QQ登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="login_foot visible-md visible-lg">
+        <div class="login_foot_box">
+            <!-- 底部导航 -->
+            <div class="login_foot_nav">
+                <a href="#">关于我们</a><span>|</span>
+                <a href="#">联系我们</a><span>|</span>
+                <a href="#">人才招聘</a><span>|</span>
+                <a href="#">商家入驻</a><span>|</span>
+                <a href="#">广告服务</a><span>|</span>
+                <a href="#">手机APP</a><span>|</span>
+                <a href="#">友情链接</a><span>|</span>
+                <a href="#">销售联盟</a><span>|</span>
+                <a href="#">宝贝社区</a><span>|</span>
+                <a href="#">规则中心</a><span>|</span>
+                <a href="#">用户隐私保护</a>
+            </div>
+            <!-- 版权备案 -->
+            <div class="login_foot_copyright">
+                <p>© 2003-现在 Bodynet.com 版权所有</p>
+                <br>
+                <p>京公网安备 11000002000088号|京ICP证070359号</p>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            var stateName = false;
+            var statePassword = false;
+            var stateVerify = false;
+
+            function regular(el, reg) {
+                var str = false;
+                var newColor = el.parent();
+                var newClass = el.parent().next();
+                newClass.removeClass();
+                if (reg.test(el.val())) {
+                    newColor.css({
+                        "border-color": "green",
+                        "box-shadow": "0 0 18px green"
+                    });
+                    newClass.addClass("colour_green");
+                    newClass.html("格式正确");
+                    str = true;
+                } else {
+                    newColor.css({
+                        "border-color": "red",
+                        "box-shadow": "0 0 18px red"
+                    });
+                    newClass.addClass("colour_red");
+                    newClass.html("格式错误，请重新输入");
+                    str = false;
+                }
+                return str;
+            }
+
+            //用户名正则
+            var regName = /^[A-Za-z\u4e00-\u9fa5][A-Za-z0-9_\-\u4e00-\u9fa5]{7,19}/;
+            $(".name").blur(function () {
+                stateName = regular($(".name"), regName);
+            });
+            //密码正则
+            var regPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+            $(".password").blur(function () {
+                statePassword = regular($(".password"), regPassword);
+            });
+
+            //滑动验证
+            $('#mpanel1').slideVerify({
+                type: 1, //类型
+                vOffset: 5, //误差量，根据需求自行调整
+                barSize: {
+                    width: '101%',
+                    height: '38px',
+                },
+                ready: function () {},
+                success: function () {
+                    stateVerify = true;
+                    //......后续操作
+                },
+                error: function () {
+                    stateVerify = false;
+                    //alert('验证失败！');
+                }
+
+            });
+
+
+            //点击事件  
+            $("#btn").click(function () {
+                console.log(stateVerify);
+                //先判断验证码是否执行完成
+                if (stateVerify) {
+                    //判断用户名与密码是否符合正则
+                    if (stateName && statePassword) {
+                        //将用户名密码传到后端
+                        $.post("http://192.168.1.102:3000/users/login", {
+                            username: $(".name").val(),
+                            password: $(".password").val(),
+                        }, function (data) {    //回调函数
+                            // console.log(data);
+                            //将拿到的json数据转位字符传
+                            var res = JSON.stringify(data);
+                            //将字符串赋给localStorage中的token
+                            localStorage.token = res;
+                            //将用户名和token传到后端
+                            $.get("http://192.168.1.102:3000/users/userinfo", {
+                                username: $(".name").val(),
+                                //转为json对象
+                                token: JSON.parse(localStorage.token).token
+                            }, function (resp) {    //回调函数
+                                // console.log(resp);
+                                //输出名称与登陆成功
+                                alert($(".name").val() + "登录成功");
+                                //1秒后跳转
+                                setTimeout(function () {
+                                    //跳转路径与传参
+                                    location.href = "../index.html" +
+                                        "?username=" + resp.userinfo.username +
+                                        "&email=" + resp.userinfo.email +
+                                        "&phone=" + resp.userinfo.phone;
+                                }, 1000);
+                            })
+
+                        });
+                    } else {
+                        alert("请输入正确的信息");
+                        // return false;
+                    }
+                } else {
+                    alert("请滑动滑块");
+                    // return false;
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

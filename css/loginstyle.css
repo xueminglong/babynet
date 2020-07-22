@@ -1,0 +1,369 @@
+/* 登录 */
+.login_top {
+    width: 100vw;
+    height: 120px;
+}
+
+.login_top_box {
+    position: relative;
+    height: 80px;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.login_top_box_img {
+    display: block;
+    width: 200px;
+    height: 60px;
+}
+
+.login_top_box_img img {
+    width: 100%;
+    height: 100%;
+    size: 100%;
+}
+
+.login_top_box_a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: auto 0;
+    font-size: 12px;
+    line-height: 44px;
+}
+
+.login_top_box_a:hover {
+    text-decoration: none;
+    color: #f40;
+}
+
+.login_top_box_a i {
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    margin: 0 5px 2px;
+    background: url(../imgs/q-icon.png);
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+.login_top_title {
+    width: 100%;
+    height: 40px;
+    background: #fff8f0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.icon-tips {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(../imgs/icon-tips.png);
+}
+
+.login_top_title p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* 登录_内容 */
+.login_content {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    background: url(../imgs/loginBg2.jpg);
+    background-size: center;
+    background-position: 50%;
+}
+
+.login_content_box {
+    position: relative;
+    float: right;
+    margin-top: 70px;
+    margin-right: 10px;
+    width: 346px;
+    background: hsla(0, 0%, 100%, .9);
+    border-radius: 10px;
+}
+
+/* 登录_警告 */
+
+.login_content_top {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #f3d995;
+}
+
+.login_content_top p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* 登录_登录框 */
+
+.login_content_center {}
+
+
+
+.login_content_center_title {
+    display: block;
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    font-size: 18px;
+    /* background: #fff; */
+    text-align: center;
+    border-bottom: 2px solid #f3d995;
+}
+
+.login_content_center_title h3 {
+    user-select: none;
+    /*文字不可选中*/
+    font-weight: 700;
+    color: #e4393c;
+}
+
+.login_content_center_box {
+    width: 346px;
+    padding: 20px;
+}
+
+.login_content_center_input {
+    width: 306px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.login_content_center_icon {
+    display: block;
+    float: left;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    border-radius: 5px 0 0 5px;
+}
+
+.login_content_center_icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    size: 100%;
+}
+
+.login_content_center_input input {
+    float: left;
+    width: 260px;
+    height: 38px;
+    line-height: 18px;
+    font-size: 14px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.login_content_center_input input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+.login_content_center_box div {
+    position: relative;
+}
+
+.login_content_center_box div span {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    top: 45px;
+    left: 10px;
+}
+
+.login_content_center_A {
+    height: 18px;
+    margin-bottom: 20px;
+}
+
+.login_content_center_A a:nth-child(1) {
+    color: #666;
+    float: left;
+}
+
+.login_content_center_A a:nth-child(2) {
+    color: #666;
+    float: right;
+}
+
+.login_content_center_A a:hover {
+    color: #E4393C;
+}
+
+.login_content_center_btn {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    background: #f40;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    border-color: transparent;
+    outline: none;
+}
+
+.login_content_center_btn:hover {
+    background-color: #f52b00;
+}
+
+/* 登录_社交账号登录 */
+
+.login_content_other {
+    width: 100%;
+    /* height:38px; */
+    line-height: 20px;
+    border-top: 1px solid #FF8520;
+    padding: 20px 20px;
+}
+
+.login_content_other label {
+    float: left;
+    /* margin-left: 32px; */
+    font-size: 14px;
+    color: #333;
+}
+
+.login_content_other_box {
+    float: right;
+}
+
+.login_content_other_box a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+}
+
+.login_content_other_box a img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    size: 100%;
+}
+
+.login_content_other_box a span {
+    float: right;
+    margin-left: 3px;
+}
+
+/* 登录_底部 */
+
+.login_foot {
+    width: 100%;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.login_foot_box {
+    line-height: 20px;
+    border-top: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.login_foot_nav {
+    text-align: center;
+    color: #666;
+}
+
+.login_foot_nav a {
+    margin: 0 10px;
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+.login_foot_copyright {
+    margin: 10px auto;
+    padding: 10px 0;
+}
+
+.login_foot_copyright p {
+    font-size: 14px;
+    font-weight: 400;
+    display: inline;
+    white-space: nowrap;
+    color: #9c9c9c;
+}
+
+@media (max-width: 992px) {
+    body {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+    .login_top {
+        height: 80px;
+    }
+
+    .login_content {
+        height: 90vh;
+        background: #FD7720;
+    }
+
+    .login_content_box {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* 注册 */
+
+.register_content_box {
+    margin-top: 20px;
+}
+
+.login_content_center_phone {
+    background: url(../imgs/loginIcon6.png) no-repeat;
+    background-size: 80% 80%;
+}
+
+.login_content_center_email {
+    background: url(../imgs/loginIcon7.png) no-repeat;
+    background-size: 80% 80%;
+}
+
+/* 颜色 */
+
+.colour_red {
+    color: red;
+}
+
+/* 中等亮度的灰色阴影 */
+.colour_ash {
+    color: #999;
+}
+
+.colour_green {
+    color: green;
+}

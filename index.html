@@ -4,13 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>宝贝网</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="">
+    <!-- 顶部导航搜索框 -->
+    <div class="header">
+        <!-- 顶部导航 -->
+        <div class="header_banner">
+            <div class="container">
+                <div class="header_banner_login">
+                    <span class="header_nav_welcome">欢迎来到宝贝网!</span>
+                    <!-- //登录 -->
+                    <a href="./html/login.html">请登录</a>
+                    <span>|</span>
+                    <!-- //注册 -->
+                    <a href="./html/register.html">免费注册</a>
+                </div>
+                <div class="header_banner_nav">
+                    <div class="header_banner_nav_box">
+                        <a href="#">首页</a>
+                    </div>
+                    <div class="header_banner_nav_box">
+                        |
+                    </div>
+                    <div class="header_banner_nav_box">
+                    <a href="#">我的宝贝</a>
+                    </div>
+                    <div class="header_banner_nav_box">
+                        |
+                    </div>
+                    <div class="header_banner_nav_box">
+                        <a href="#">购物车</a>
+                    </div>
+                    <div class="header_banner_nav_box">
+                        |
+                    </div>
+                    <div class="header_banner_nav_box">
+                        <a href="#">收藏夹</a>
+                    </div>
+                    <div class="header_banner_nav_box">
+                        |
+                    </div>
+                    <div class="header_banner_nav_box">
+                        <a href="#">帮助中心</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="header_search">
+            <div class="container">
+                <a href="index.html" class="header_search_img">
+                    <img src="./imgs/logo1.png" alt="">
+                </a>
+                <div class="header_search_content">
+                    <input type="text" placeholder="请输入关键字">
+                    <a href="#"><img src="imgs/homePage/放大镜.png" alt=""></a>
+                </div>
+            </div>
+        </div>
 
     </div>
+    <script>
+        //得到url中？后面的字符串（包括？）
+        var url = location.search;
+        // console.log(url);
+        //用来接收key value
+        var obj = {};
+        //
+        //判断是否有参数(如果有？，则代表传递参数了)
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            var newStr = str.split("&");
+            newStr.forEach(function (item, index) {
+                var arr = item.split("=");
+                obj[arr[0]] = arr[1];
+            });
+            console.log(obj)
+        }
+    </script>
 </body>
 
 </html>
